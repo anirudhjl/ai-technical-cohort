@@ -1,0 +1,19 @@
+{
+  "sourceId": "fixture_licboard_low_confidence",
+  "sourceSystem": "license_board",
+  "receivedAt": "2024-03-03T16:00:00Z",
+  "hcpNameRaw": "E. Petrov",
+  "address": {
+    "line1": "900 Harbor View Ave",
+    "city": "Tampa",
+    "state": "FL",
+    "postalCode": "33602",
+    "country": "US"
+  },
+  "freeTextNote": "License board renewal filing lists a Florida practice address; no NPI provided on the filing.",
+  "expectedOutcome": {
+    "candidateHcpId": "HCP-1003",
+    "identityConfidenceBelowFloor": true,
+    "band": "review"
+  }
+}

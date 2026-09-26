@@ -1,0 +1,88 @@
+[
+  {
+    "hcpId": "HCP-1001",
+    "name": "Alice Nguyen",
+    "npi": "1234567890",
+    "specialty": "Cardiology",
+    "currentAddress": {
+      "line1": "500 Medical Plaza Dr",
+      "line2": "Suite 200",
+      "city": "Austin",
+      "state": "TX",
+      "postalCode": "78701",
+      "country": "US"
+    },
+    "addressHistory": [
+      {
+        "address": {
+          "line1": "500 Medical Plaza Dr",
+          "line2": "Suite 200",
+          "city": "Austin",
+          "state": "TX",
+          "postalCode": "78701",
+          "country": "US"
+        },
+        "sourceSystem": "crm_export",
+        "sourceTimestamp": "2024-01-10T00:00:00Z",
+        "recordedAt": "2024-01-12T09:00:00Z",
+        "version": 1
+      }
+    ]
+  },
+  {
+    "hcpId": "HCP-1002",
+    "name": "Marcus Webb",
+    "npi": "9876543210",
+    "specialty": "Oncology",
+    "currentAddress": {
+      "line1": "77 Riverside Pkwy",
+      "city": "Denver",
+      "state": "CO",
+      "postalCode": "80202",
+      "country": "US"
+    },
+    "addressHistory": [
+      {
+        "address": {
+          "line1": "77 Riverside Pkwy",
+          "city": "Denver",
+          "state": "CO",
+          "postalCode": "80202",
+          "country": "US"
+        },
+        "sourceSystem": "onekey_feed",
+        "sourceTimestamp": "2023-11-02T00:00:00Z",
+        "recordedAt": "2023-11-05T14:30:00Z",
+        "version": 1
+      }
+    ]
+  },
+  {
+    "hcpId": "HCP-1003",
+    "name": "Elena Petrov",
+    "npi": "4567891230",
+    "specialty": "Endocrinology",
+    "currentAddress": {
+      "line1": "12 Lakeside Medical Ctr",
+      "city": "Minneapolis",
+      "state": "MN",
+      "postalCode": "55401",
+      "country": "US"
+    },
+    "addressHistory": [
+      {
+        "address": {
+          "line1": "12 Lakeside Medical Ctr",
+          "city": "Minneapolis",
+          "state": "MN",
+          "postalCode": "55401",
+          "country": "US"
+        },
+        "sourceSystem": "license_board",
+        "sourceTimestamp": "2023-06-01T00:00:00Z",
+        "recordedAt": "2023-06-03T10:00:00Z",
+        "version": 1
+      }
+    ]
+  }
+]

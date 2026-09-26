@@ -1,0 +1,381 @@
+/* box-sizing reset, body, and font are set once in index.css; this file
+   only adds app-specific layout/component styles on top of those tokens. */
+
+#root {
+  width: 100%;
+  max-width: none;
+  text-align: left;
+  border-inline: none;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.user-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.user-switcher select {
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+.user-switcher select:hover {
+  border-color: var(--color-border);
+}
+.user-switcher select:focus-visible {
+  outline: none;
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.app-main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.error-banner {
+  background: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.hcp-view h1 {
+  margin-bottom: 0;
+}
+
+.specialty {
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+}
+
+.status-card p {
+  font-size: 1.05rem;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+.history-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.meta {
+  color: var(--color-text-faint);
+  font-size: 0.8rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #e4e9ee;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.tabs button:hover:not(.active) {
+  background: #d8e0e8;
+}
+.tabs button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.tabs button.active {
+  background: var(--color-surface);
+  font-weight: 600;
+  box-shadow: var(--shadow-card);
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+button:hover:not(:disabled) {
+  border-color: var(--color-text-faint);
+}
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.toolbar button:first-child {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+.toolbar button:first-child:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+/* Horizontally scrollable wrapper so wide tables degrade to a scroll on
+   narrow viewports instead of squeezing columns illegibly (see .case-table
+   usage in StewardView/Observability, which wrap the table in this div). */
+.table-scroll {
+  overflow-x: auto;
+}
+
+.case-table,
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.case-table th,
+.case-table td,
+.log-table th,
+.log-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-size: 0.9rem;
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.clickable-row:hover {
+  background: var(--color-row-hover);
+}
+.clickable-row:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.band-pill {
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.band-auto {
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+.band-review {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+.band-reject {
+  background: var(--color-danger-bg);
+  color: var(--color-danger-text);
+}
+
+.outcome-blocked {
+  background: var(--color-danger-bg);
+}
+.outcome-error {
+  background: var(--color-warning-bg);
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+.back-link:hover {
+  text-decoration: underline;
+  border-color: transparent;
+}
+.back-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.status-line {
+  color: var(--color-text-muted);
+}
+
+.guardrail-list,
+.audit-timeline {
+  list-style: none;
+  padding: 0;
+}
+.guardrail-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.guardrail-list li.pass strong {
+  color: var(--color-success-text);
+}
+.guardrail-list li.fail strong {
+  color: var(--color-danger-text);
+}
+
+.audit-timeline li {
+  padding: 0.6rem 0;
+  border-left: 2px solid var(--color-border);
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.audit-timeline .evidence {
+  font-size: 0.85rem;
+  color: #3a4a5c;
+}
+.audit-timeline .decision {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.decision-panel textarea {
+  width: 100%;
+  min-height: 70px;
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-family: inherit;
+  transition: border-color var(--transition-fast);
+}
+.decision-panel textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.decision-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.decision-actions .approve {
+  background: var(--color-success-text);
+  color: white;
+  border: none;
+}
+.decision-actions .approve:hover:not(:disabled) {
+  background: #175f29;
+}
+.decision-actions .reject {
+  background: var(--color-danger-text);
+  color: white;
+  border: none;
+}
+.decision-actions .reject:hover:not(:disabled) {
+  background: #832222;
+}
+
+.edit-address {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.edit-address label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.edit-address input {
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  margin-top: 0.2rem;
+  transition: border-color var(--transition-fast);
+}
+.edit-address input:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.flags {
+  color: var(--color-warning-text);
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .decision-actions {
+    flex-direction: column;
+  }
+}

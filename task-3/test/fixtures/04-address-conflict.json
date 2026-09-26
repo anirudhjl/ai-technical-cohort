@@ -1,0 +1,22 @@
+{
+  "sourceId": "fixture_repform_conflict",
+  "sourceSystem": "rep_form",
+  "receivedAt": "2024-03-04T09:20:00Z",
+  "hcpNameRaw": "Elena Petrov",
+  "npi": "4567891230",
+  "specialty": "Endocrinology",
+  "address": {
+    "line1": "2200 Biscayne Health Pavilion",
+    "city": "Miami",
+    "state": "FL",
+    "postalCode": "33137",
+    "country": "US"
+  },
+  "freeTextNote": "Field rep visited a new Miami office this week and says Dr. Petrov relocated her practice from Minneapolis.",
+  "expectedOutcome": {
+    "candidateHcpId": "HCP-1003",
+    "identityConfidence": 0.95,
+    "reconciliationStatus": "conflict",
+    "band": "review"
+  }
+}

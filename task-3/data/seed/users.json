@@ -1,0 +1,19 @@
+[
+  {
+    "id": "hcp_1001",
+    "name": "Dr. Alice Nguyen",
+    "role": "hcp",
+    "hcpId": "HCP-1001"
+  },
+  {
+    "id": "hcp_1002",
+    "name": "Dr. Marcus Webb",
+    "role": "hcp",
+    "hcpId": "HCP-1002"
+  },
+  {
+    "id": "steward_1",
+    "name": "Priya Raman",
+    "role": "data_steward"
+  }
+]

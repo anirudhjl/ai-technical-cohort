@@ -1,0 +1,22 @@
+{
+  "sourceId": "fixture_crm_clean_match",
+  "sourceSystem": "crm_export",
+  "receivedAt": "2024-03-01T08:15:00Z",
+  "hcpNameRaw": "Alice Nguyen, MD",
+  "npi": "1234567890",
+  "specialty": "Cardiology",
+  "address": {
+    "line1": "500 Medical Plaza Dr",
+    "line2": "Ste. 200",
+    "city": "Austin",
+    "state": "tx",
+    "postalCode": "78701",
+    "country": "US"
+  },
+  "expectedOutcome": {
+    "candidateHcpId": "HCP-1001",
+    "identityConfidence": 0.95,
+    "reconciliationStatus": "match",
+    "band": "auto"
+  }
+}

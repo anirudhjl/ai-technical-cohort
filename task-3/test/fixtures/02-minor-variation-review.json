@@ -1,0 +1,22 @@
+{
+  "sourceId": "fixture_onekey_variation",
+  "sourceSystem": "onekey_feed",
+  "receivedAt": "2024-03-02T11:40:00Z",
+  "hcpNameRaw": "Marcus Webb",
+  "npi": "9876543210",
+  "specialty": "Oncology",
+  "address": {
+    "line1": "77 Riverside Pkwy",
+    "line2": "Suite 410",
+    "city": "Denver",
+    "state": "CO",
+    "postalCode": "80202",
+    "country": "US"
+  },
+  "expectedOutcome": {
+    "candidateHcpId": "HCP-1002",
+    "identityConfidence": 0.95,
+    "reconciliationStatus": "variation",
+    "band": "review"
+  }
+}

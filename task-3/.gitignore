@@ -1,0 +1,9 @@
+node_modules/
+dist/
+logs/*.log
+data/cases/*.json
+!data/cases/.gitkeep
+data/audit/*.jsonl
+.env
+web/node_modules/
+web/dist/
